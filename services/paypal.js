@@ -30,23 +30,23 @@ exports.createOrder = async () => {
                 {
                     items: [
                         {
-                            name: 'Node.js Complete Course',
-                            description: 'Node.js Complete Course with Express and MongoDB',
+                            name: 'AAH 80 EA',
+                            description: 'All About Health 80 EA',
                             quantity: 1,
                             unit_amount: {
                                 currency_code: 'USD',
-                                value: '100.00'
+                                value: '99.99'
                             }
                         }
                     ],
 
                     amount: {
                         currency_code: 'USD',
-                        value: '100.00',
+                        value: '99.99',
                         breakdown: {
                             item_total: {
                                 currency_code: 'USD',
-                                value: '100.00'
+                                value: '99.99'
                             }
                         }
                     }
@@ -58,7 +58,7 @@ exports.createOrder = async () => {
                 cancel_url: process.env.BASE_URL + '/cancel-order',
                 shipping_preference: 'NO_SHIPPING',
                 user_action: 'PAY_NOW',
-                brand_name: 'manfra.io'
+                brand_name: 'c4ei.net/home'
             }
         })
     })

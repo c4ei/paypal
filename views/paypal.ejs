@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AAH Buy use Paypal</title>
+</head>
+<body>
+    <h1>All About Health 80 EA Buy use Paypal </h1>
+    <h2>Price: $99.99</h2>
+    <%
+    if(result!="nodata"){
+        %>
+        <%=result.c4ei_addr%> : address
+        <%
+    }
+    %>
+    
+    <form id="frm_paypal" name="frm_paypal" method="post">
+        Address to receive AAH deposit(AAH 입금받을 주소) <br />
+        <input type="text" id="rcv_addr" name="rcv_addr" value="<%=rcv_addr%>" style="width:250px;" /> <br />
+        <input type="button" id="buyBtn" name="buyBtn" value="Buy" onclick="jsfn_buyAAH();">
+    </form>
+    For bulk purchase inquiries, please email c4ei.net@gmail.com. <br />
+    대량 구매 문의는 c4ei.net@gmail.com 으로 문의 메일 주세요<br />
+    <script>
+        function jsfn_buyAAH() {
+            var _addr = document.getElementById("rcv_addr");
+            var _form = document.getElementById("frm_paypal");
+            if(_addr.value!=''){
+                _form.action = "/pay";
+                _form.submit();
+            }else{
+                alert('전송 받을 AAH 주소를 입력해 주세요.\nPlease enter the AAH address to receive the transfer.');
+            }
+        }
+    </script>
+
+</body>
+</html>
